@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '0.10'
+install:
+- npm install
+- zip -r ethercalc-offline ./*
+deploy:
+  provider: releases
+  api_key:
+    secure: AHGuAP86cDEQsU+pJ8r4+I7+Xs2lcfHK0+O2qTCTJK/7UDELOU67LiUH+dG/mjAO3dnllCcqTkjWw7PY4GnIFEqPJ5WAPSgVk/1iMlx75GYp95Ws2SjpuE+iuY+4Riqp3XPT/0IQ8h24X4HJYK1YragxevL0Awjo298YB96CZB4TCmT3IFYnlXYp26Mli/zWbMAaOnh6uGGadVLbyczMQZfb/C9kO+K6Kg0Mu7QyvEd33S2dRcyEpO3/oPGRTC5bUheM2zRGY1iOTjtkWtUIcNIPLIOKADygqoa1w78fl/I/dSSSxYUGokvPTS2XG5oDA5q9MchSkaQdf//f5ZMn8yRcFrChoZwnT60fIJlFwTT2k52qthYNYbYP22z9TqKSqWk8ctT/0oC84wC+HYP/SOoAzFQ/J9BwJ7xFZ+S87UJgvin3txHeMmnzotAQDFpuInz1+lfuhtDqmAY7QUn1g+c3BKhf7FSj7d6Cv4MDgWZURYUCFQT88u42FTsZIqwH85kCDTCKGB7XvIEMdY9zkZViIm6NgaIuhiXE3DkA9ZEfBpgLdHO+W8e7DhGUaOwr3BAjDTZTJ1n1GfcXOZpCfjQlveFBUlgXZVhqg5s/NqvN6UW2UcSuFb7C8uA+Zv956rRoVoQR/eRiyxgLH7nI3wjCv/N9gCwdwi3jj2YBesk=
+  file: ethercalc-offline.zip
+  on:
+    tags: true
+    all_branches: true
